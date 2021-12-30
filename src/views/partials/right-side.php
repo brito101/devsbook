@@ -1,6 +1,6 @@
 <div class="box banners">
     <div class="box-header">
-        <div class="box-header-text">Patrocinios</div>
+        <div class="box-header-text">Patrocínios</div>
         <div class="box-header-buttons">
 
         </div>
@@ -12,6 +12,6 @@
 </div>
 <div class="box">
     <div class="box-body m-10">
-        Criado com ❤️ por B7Web
+        Criado com ❤️ por <a href="https://www.rodrigobrito.dev.br" target="_blank" rel="noreferrer">Rodrigo Brito</a>
     </div>
 </div>

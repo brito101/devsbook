@@ -188,6 +188,15 @@ header .head-side {
   max-width: 100%;
 }
 
+.box .box-body a {
+  text-decoration: none;
+  color: initial;
+}
+
+.box .box-body a:hover {
+  color: #224b7a;
+}
+
 .feed .border-top-flat {
   border-top: 0;
   border-top-left-radius: 0;
@@ -254,6 +263,7 @@ header .head-side {
 .banners .box-body a {
   display: block;
   margin-bottom: 5px;
+  text-decoration: none;
 }
 
 .profile-cover {
@@ -469,8 +479,9 @@ header .head-side {
   }
 
   .search-area input {
-    width: 35px;
+    width: 31px;
   }
+
   .search-area input:focus {
     width: 150px;
   }
