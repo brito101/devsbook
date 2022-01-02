@@ -413,6 +413,12 @@ header .head-side {
   max-width: 100%;
 }
 
+.feed-pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .feed-pagination a {
   display: inline-block;
   padding: 7px 10px;
