@@ -117,7 +117,10 @@ class PostHandler
             ->page($page, $perPage)
             ->get();
 
-        $pageCount = ceil(count($postList) / $perPage);
+        $total = Post::select()
+            ->where('id_user', $idUser)
+            ->count();
+        $pageCount = ceil($total / $perPage);
 
         // 3. transformar o resultado em objetos dos models
         $posts = self::_postListToObject($postList, $loggedUserId);
@@ -149,7 +152,10 @@ class PostHandler
             ->page($page, $perPage)
             ->get();
 
-        $pageCount = ceil(count($postList) / $perPage);
+        $total = Post::select()
+            ->where('id_user', 'in', $users)
+            ->count();
+        $pageCount = ceil($total / $perPage);
 
         // 3. transformar o resultado em objetos dos models
         $posts = self::_postListToObject($postList, $idUser);
