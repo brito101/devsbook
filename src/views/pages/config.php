@@ -34,7 +34,7 @@
 
             <label>
                 Data de nascimento:<br />
-                <input type="text" name="birthdate" value="<?= date('d/m/Y', strtotime($user->birthdate)); ?>" />
+                <input type="text" name="birthdate" class="mask-date" value="<?= date('d/m/Y', strtotime($user->birthdate)); ?>" />
             </label>
 
             <label>
@@ -71,12 +71,24 @@
     </section>
 
 </section>
-<script src="https://unpkg.com/imask"></script>
+
 <script>
-    IMask(
-        document.getElementById('birthdate'), {
-            mask: '00/00/0000'
-        }
-    );
+    const date = document.querySelectorAll(".mask-date");
+
+    if (date) {
+        date.forEach((el) => {
+            el.addEventListener("keyup", ({
+                target
+            }) => {
+                const v = target.value;
+                if (v.match(/^\d{2}$/) !== null) {
+                    target.value = `${v}/`;
+                }
+                if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                    target.value = `${v}/`;
+                }
+            })
+        })
+    }
 </script>
 <?= $render('footer'); ?>

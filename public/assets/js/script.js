@@ -32,18 +32,21 @@ if (document.querySelector(".tab-item")) {
   })
 }
 
-document
-  .querySelector(".feed-new-input-placeholder")
-  .addEventListener("click", function (obj) {
+const inputPlaceholder = document.querySelector(".feed-new-input-placeholder")
+
+if (inputPlaceholder) {
+  inputPlaceholder.addEventListener("click", function (obj) {
     obj.target.style.display = "none"
     document.querySelector(".feed-new-input").style.display = "block"
     document.querySelector(".feed-new-input").focus()
     document.querySelector(".feed-new-input").innerText = ""
   })
+}
 
-document
-  .querySelector(".feed-new-input")
-  .addEventListener("blur", function (obj) {
+const newInput = document.querySelector(".feed-new-input")
+
+if (newInput) {
+  newInput.addEventListener("blur", function (obj) {
     let value = obj.target.innerText.trim()
     if (value == "") {
       obj.target.style.display = "none"
@@ -51,6 +54,7 @@ document
         "block"
     }
   })
+}
 
 function closeFeedWindow() {
   document.querySelectorAll(".feed-item-more-window").forEach((item) => {
