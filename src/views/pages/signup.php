@@ -26,7 +26,7 @@
 
             <input placeholder="Digite sua Senha" class="input" type="password" name="password" required />
 
-            <input placeholder="Digite sua Data de Nascimento" class="input" type="text" name="birthdate" id="birthdate" required />
+            <input placeholder="Digite sua Data de Nascimento" class="input mask-date" type="text" name="birthdate" id="birthdate" required />
 
             <input class="button" type="submit" value="Fazer cadastro" />
 
@@ -34,13 +34,24 @@
         </form>
     </section>
 
-    <script src="https://unpkg.com/imask"></script>
     <script>
-        IMask(
-            document.getElementById('birthdate'), {
-                mask: '00/00/0000'
-            }
-        );
+        const date = document.querySelectorAll(".mask-date");
+
+        if (date) {
+            date.forEach((el) => {
+                el.addEventListener("keyup", ({
+                    target
+                }) => {
+                    const v = target.value;
+                    if (v.match(/^\d{2}$/) !== null) {
+                        target.value = `${v}/`;
+                    }
+                    if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                        target.value = `${v}/`;
+                    }
+                })
+            })
+        };
     </script>
 </body>
 
