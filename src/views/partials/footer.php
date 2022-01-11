@@ -7,8 +7,8 @@
 <script type="text/javascript">
     const BASE = '<?= $base; ?>';
 </script>
-<script type="text/javascript" src="<?= $base; ?>/assets/js/script.js"></script>
-<script type="text/javascript" src="<?= $base; ?>/assets/js/vanillaModal.js"></script>
+<script type="text/javascript" src="<?= $base; ?>/assets/js/script-minify/main.js"></script>
+<script type="text/javascript" src="<?= $base; ?>/assets/js/vanillaModal-minify/main.js"></script>
 </body>
 
 </html>
