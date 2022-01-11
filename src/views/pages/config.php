@@ -1,11 +1,12 @@
 <?= $render('header', ['loggedUser' => $loggedUser]); ?>
 
 <section class="container main">
+    <h1 class="hide">Conteúdo Principal</h1>
     <?= $render('sidebar', ['activeMenu' => 'config']); ?>
 
     <section class="feed mt-10">
 
-        <h1>Configurações</h1>
+        <h2>Configurações</h2>
 
         <?php if (!empty($flash)) : ?>
             <div class="flash"><?php echo $flash; ?></div>
@@ -16,13 +17,13 @@
             <label>
                 Novo Avatar:<br />
                 <input type="file" name="avatar" /><br />
-                <img class="image-edit" src="<?= $base; ?>/media/avatars/<?= $user->avatar; ?>" />
+                <img alt="" class="image-edit" src="<?= $base; ?>/media/avatars/<?= $user->avatar; ?>" />
             </label>
 
             <label>
                 Nova Capa:<br />
                 <input type="file" name="cover" /><br />
-                <img class="image-edit" src="<?= $base; ?>/media/covers/<?= $user->cover; ?>" />
+                <img alt="" class="image-edit" src="<?= $base; ?>/media/covers/<?= $user->cover; ?>" />
             </label>
 
             <hr />

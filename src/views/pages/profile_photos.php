@@ -1,9 +1,11 @@
 <?= $render('header', ['loggedUser' => $loggedUser]); ?>
 
 <section class="container main">
+    <h1 class="hide">Conteúdo Principal</h1>
     <?= $render('sidebar', ['activeMenu' => 'photos']); ?>
 
     <section class="feed">
+        <h2 class="hide">Feed</h2>
 
         <?= $render('perfil-header', ['user' => $user, 'loggedUser' => $loggedUser, 'isFollowing' => $isFollowing]); ?>
 
@@ -23,10 +25,10 @@
                             <?php foreach ($user->photos as $photo) : ?>
                                 <div class="user-photo-item">
                                     <a href="#modal-<?= $photo->id; ?>" rel="modal:open">
-                                        <img src="<?= $base; ?>/media/uploads/<?= $photo->body; ?>" />
+                                        <img alt="" src="<?= $base; ?>/media/uploads/<?= $photo->body; ?>" />
                                     </a>
                                     <div id="modal-<?= $photo->id; ?>" style="display:none">
-                                        <img src="<?= $base; ?>/media/uploads/<?= $photo->body; ?>" />
+                                        <img alt="" src="<?= $base; ?>/media/uploads/<?= $photo->body; ?>" />
                                     </div>
                                 </div>
                             <?php endforeach; ?>

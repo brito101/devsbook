@@ -1,9 +1,11 @@
 <?= $render('header', ['loggedUser' => $loggedUser]); ?>
 
 <section class="container main">
+    <h1 class="hide">Conteúdo Principal</h1>
     <?= $render('sidebar', ['activeMenu' => 'profile']); ?>
 
     <section class="feed">
+        <h2 class="hide">Feed</h2>
 
         <?= $render('perfil-header', ['user' => $user, 'loggedUser' => $loggedUser, 'isFollowing' => $isFollowing]); ?>
 
@@ -15,20 +17,20 @@
                     <div class="box-body">
 
                         <div class="user-info-mini">
-                            <img src="<?= $base; ?>/assets/images/calendar.png" />
+                            <img alt="" src="<?= $base; ?>/assets/images/calendar.png" />
                             <?= date('d/m/Y', strtotime($user->birthdate)); ?> (<?= $user->ageYears; ?> anos)
                         </div>
 
                         <?php if (!empty($user->city)) : ?>
                             <div class="user-info-mini">
-                                <img src="<?= $base; ?>/assets/images/pin.png" />
+                                <img alt="" src="<?= $base; ?>/assets/images/pin.png" />
                                 <?= $user->city; ?>
                             </div>
                         <?php endif; ?>
 
                         <?php if (!empty($user->work)) : ?>
                             <div class="user-info-mini">
-                                <img src="<?= $base; ?>/assets/images/work.png" />
+                                <img alt="" src="<?= $base; ?>/assets/images/work.png" />
                                 <?= $user->work; ?>
                             </div>
                         <?php endif; ?>
@@ -53,7 +55,7 @@
                                 <div class="friend-icon">
                                     <a href="<?= $base; ?>/perfil/<?= $user->following[$q]->id; ?>">
                                         <div class="friend-icon-avatar">
-                                            <img src="<?= $base; ?>/media/avatars/<?= $user->following[$q]->avatar; ?>" />
+                                            <img alt="<?= $user->following[$q]->name; ?>" src="<?= $base; ?>/media/avatars/<?= $user->following[$q]->avatar; ?>" />
                                         </div>
                                         <div class="friend-icon-name">
                                             <?= $user->following[$q]->name; ?>
@@ -85,10 +87,10 @@
                             <?php if (isset($user->photos[$q])) : ?>
                                 <div class="user-photo-item">
                                     <a href="#modal-<?= $user->photos[$q]->id; ?>" rel="modal:open">
-                                        <img src="<?= $base; ?>/media/uploads/<?= $user->photos[$q]->body; ?>" />
+                                        <img alt="" src="<?= $base; ?>/media/uploads/<?= $user->photos[$q]->body; ?>" />
                                     </a>
                                     <div id="modal-<?= $user->photos[$q]->id; ?>" style="display:none">
-                                        <img src="<?= $base; ?>/media/uploads/<?= $user->photos[$q]->body; ?>" />
+                                        <img alt="" src="<?= $base; ?>/media/uploads/<?= $user->photos[$q]->body; ?>" />
                                     </div>
                                 </div>
                             <?php endif; ?>

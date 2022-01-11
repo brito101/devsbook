@@ -1,10 +1,11 @@
 <?= $render('header', ['loggedUser' => $loggedUser]); ?>
 
 <section class="container main">
+    <h1 class="hide">Conteúdo Principal</h1>
     <?= $render('sidebar', ['activeMenu' => 'home']); ?>
 
     <section class="feed mt-10">
-
+        <h2 class="hide">Home</h2>
         <div class="row">
             <div class="column pr-5">
 

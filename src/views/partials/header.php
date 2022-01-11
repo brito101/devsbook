@@ -12,7 +12,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="<?= $base; ?>"><img src="<?= $base; ?>/assets/images/devsbook_logo.png" /></a>
+                <a href="<?= $base; ?>"><img alt="Devsbook" src="<?= $base; ?>/assets/images/devsbook_logo.png" /></a>
             </div>
             <div class="head-side">
                 <div class="head-side-left">
@@ -26,11 +26,11 @@
                     <a href="<?= $base; ?>/perfil" class="user-area">
                         <div class="user-area-text"><?= $loggedUser->name; ?></div>
                         <div class="user-area-icon">
-                            <img src="<?= $base; ?>/media/avatars/<?= $loggedUser->avatar; ?>" />
+                            <img alt="<?= $loggedUser->name; ?>" src="<?= $base; ?>/media/avatars/<?= $loggedUser->avatar; ?>" />
                         </div>
                     </a>
                     <a href="<?= $base; ?>/sair" class="user-logout">
-                        <img src="<?= $base; ?>/assets/images/power_white.png" />
+                        <img alt="" src="<?= $base; ?>/assets/images/power_white.png" />
                     </a>
                 </div>
             </div>

@@ -118,7 +118,7 @@ if (document.querySelector(".fic-item-field")) {
             '<a href="' +
             BASE +
             json.link +
-            '"><img src="' +
+            '"><img alt="" src="' +
             BASE +
             json.avatar +
             '" /></a>'

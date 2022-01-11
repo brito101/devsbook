@@ -2,7 +2,7 @@
     <div class="box-body">
         <div class="feed-item-head row mt-20 m-width-20">
             <div class="feed-item-head-photo">
-                <a href="<?= $base; ?>/perfil/<?= $data->user->id; ?>"><img src="<?= $base; ?>/media/avatars/<?= $data->user->avatar; ?>" /></a>
+                <a href="<?= $base; ?>/perfil/<?= $data->user->id; ?>"><img alt="<?= $data->user->name; ?>" src="<?= $base; ?>/media/avatars/<?= $data->user->avatar; ?>" /></a>
             </div>
             <div class="feed-item-head-info">
                 <a href="<?= $base; ?>/perfil/<?= $data->user->id; ?>"><span class="fidi-name"><?= $data->user->name; ?></span></a>
@@ -22,7 +22,7 @@
             </div>
             <?php if ($data->mine) : ?>
                 <div class="feed-item-head-btn">
-                    <img src="<?= $base; ?>/assets/images/more.png" />
+                    <img alt="" src="<?= $base; ?>/assets/images/more.png" />
                     <div class="feed-item-more-window">
                         <a href="<?= $base ?>/post/<?= $data->id ?>/delete">Excluir Post</a>
                     </div>
@@ -36,7 +36,7 @@
                     echo nl2br($data->body);
                     break;
                 case 'photo':
-                    echo '<img src="' . $base . '/media/uploads/' . $data->body . '" />';
+                    echo '<img alt="" src="' . $base . '/media/uploads/' . $data->body . '" />';
                     break;
             }
             ?>
@@ -51,7 +51,7 @@
                 <?php foreach ($data->comments as $item) : ?>
                     <div class="fic-item row m-height-10 m-width-20">
                         <div class="fic-item-photo">
-                            <a href="<?= $base; ?>/perfil/<?= $item['user']['id']; ?>"><img src="<?= $base; ?>/media/avatars/<?= $item['user']['avatar']; ?>" /></a>
+                            <a href="<?= $base; ?>/perfil/<?= $item['user']['id']; ?>"><img alt="" src="<?= $base; ?>/media/avatars/<?= $item['user']['avatar']; ?>" /></a>
                         </div>
                         <div class="fic-item-info">
                             <a href="<?= $base; ?>/perfil/<?= $item['user']['id']; ?>"><?= $item['user']['name']; ?></a>
@@ -63,7 +63,7 @@
 
             <div class="fic-answer row m-height-10 m-width-20">
                 <div class="fic-item-photo">
-                    <a href="<?= $base; ?>/perfil/<?= $data->user->id; ?>"><img src="<?= $base; ?>/media/avatars/<?= $loggedUser->avatar; ?>" /></a>
+                    <a href="<?= $base; ?>/perfil/<?= $data->user->id; ?>"><img alt="" src="<?= $base; ?>/media/avatars/<?= $loggedUser->avatar; ?>" /></a>
                 </div>
                 <input type="text" class="fic-item-field" placeholder="Escreva um comentário" />
             </div>

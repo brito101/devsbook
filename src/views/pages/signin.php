@@ -11,10 +11,11 @@
 <body>
     <header>
         <div class="container">
-            <a href=""><img src="<?= $base; ?>/assets/images/devsbook_logo.png" /></a>
+            <a href=""><img alt="Devsbook" src="<?= $base; ?>/assets/images/devsbook_logo.png" /></a>
         </div>
     </header>
     <section class="container main">
+        <h1 class="hide">Conteúdo Principal</h1>
         <form method="POST" action="<?= $base; ?>/login">
             <?php if (!empty($flash)) : ?>
                 <div class="flash"><?php echo $flash; ?></div>

@@ -1,9 +1,11 @@
 <?= $render('header', ['loggedUser' => $loggedUser]); ?>
 
 <section class="container main">
+    <h1 class="hide">Conteúdo Principal</h1>
     <?= $render('sidebar', ['activeMenu' => 'friends']); ?>
 
     <section class="feed">
+        <h2 class="hide">Feed</h2>
 
         <?= $render('perfil-header', ['user' => $user, 'loggedUser' => $loggedUser, 'isFollowing' => $isFollowing]); ?>
 
@@ -31,7 +33,7 @@
                                         <div class="friend-icon">
                                             <a href="<?= $base; ?>/perfil/<?= $follower->id; ?>">
                                                 <div class="friend-icon-avatar">
-                                                    <img src="<?= $base; ?>/media/avatars/<?= $follower->avatar; ?>" />
+                                                    <img alt="<?= $follower->name; ?>" src="<?= $base; ?>/media/avatars/<?= $follower->avatar; ?>" />
                                                 </div>
                                                 <div class="friend-icon-name">
                                                     <?= $follower->name; ?>
@@ -51,7 +53,7 @@
                                         <div class="friend-icon">
                                             <a href="<?= $base; ?>/perfil/<?= $follower->id; ?>">
                                                 <div class="friend-icon-avatar">
-                                                    <img src="<?= $base; ?>/media/avatars/<?= $follower->avatar; ?>" />
+                                                    <img alt="<?= $follower->name; ?>" src="<?= $base; ?>/media/avatars/<?= $follower->avatar; ?>" />
                                                 </div>
                                                 <div class="friend-icon-name">
                                                     <?= $follower->name; ?>
